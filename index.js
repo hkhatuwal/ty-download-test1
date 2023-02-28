@@ -5,4 +5,6 @@ const ytdl = require('ytdl-core');
 // TypeScript: import ytdl = require('ytdl-core'); with neither of the above
 
 ytdl('http://www.youtube.com/watch?v=aqz-KE-bpKQ')
-    .pipe(fs.createWriteStream('video.mp4'));
+    .pipe(fs.createWriteStream('video.mp4')).then(()=>{
+    console.log("Done")
+});
